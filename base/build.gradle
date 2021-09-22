@@ -8,3 +8,8 @@ android {
         consumerProguardFiles 'proguard-base.pro'
     }
 }
+// api 与 implementation 的区别：https://www.jianshu.com/p/8962d6ba936e
+dependencies {
+    // 语种切换框架：https://github.com/getActivity/MultiLanguages
+    api 'com.github.getActivity:MultiLanguages:6.9'
+}

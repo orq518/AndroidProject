@@ -133,8 +133,8 @@ dependencies {
     implementation project(':base')
     // 控件封装
     implementation project(':widget')
-    // 友盟封装
-    implementation project(':umeng')
+//    // 友盟封装
+//    implementation project(':umeng')
 
     // 权限请求框架：https://github.com/getActivity/XXPermissions
     implementation 'com.hjq:xxpermissions:9.8'
@@ -193,7 +193,10 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
     // noinspection GradleDependency
     previewImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
-
+    //DrawerLayout侧边栏中动画效果用到的
+    implementation 'com.nineoldandroids:library:2.4.0'
+//    // 语种切换框架：https://github.com/getActivity/MultiLanguages
+//    implementation 'com.github.getActivity:MultiLanguages:6.9'
     // 国际化：https://github.com/getActivity/MultiLanguages
     // 悬浮窗：https://github.com/getActivity/XToast
     // 日志输出：https://github.com/getActivity/Logcat

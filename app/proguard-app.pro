@@ -17,5 +17,5 @@
 
 # 不混淆被 DebugLog 注解的方法信息
 -keepclassmembernames class ** {
-    @com.hjq.demo.aop.DebugLog <methods>;
+    @com.fxkj.huabei.aop.DebugLog <methods>;
 }
