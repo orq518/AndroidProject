@@ -1,5 +1,6 @@
 package com.fxkj.huabei.ui.app;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +37,6 @@ public abstract class AppActivity extends BaseActivity
     private BaseDialog mDialog;
     /** 对话框数量 */
     private int mDialogTotal;
-
     /**
      * 当前加载对话框是否在显示中
      */

@@ -5,8 +5,14 @@
     <color name="common_primary_dark_color">@color/black</color>
     <color name="common_accent_color">#5A8DDF</color>
     <color name="common_window_background_color">#F4F4F4</color>
-    <color name="common_text_color">#333333</color>
+    <color name="common_text_color_333">#333333</color>
+    <color name="common_text_color_222">#222222</color>
+    <color name="common_text_color_828282">#828282</color>
+    <color name="common_gray_d1">#D1D1D1</color>
     <color name="common_text_hint_color">@color/panda</color>
+    <color name="color_white_fb">#FBFBFB</color>
+    <color name="color_text_blue_2f">#2F80ED</color>
+
 
     <!-- 按钮按压时的颜色 -->
     <color name="common_button_pressed_color">#AA5A8DDF</color>
@@ -21,5 +27,11 @@
     <color name="common_confirm_text_color">#007AFF</color>
     <!-- 对话框取消按钮的文本颜色 -->
     <color name="common_cancel_text_color">#F44336</color>
+    <color name="logcat_level_verbose_color">#FFBBBBBB</color>
+    <color name="logcat_level_debug_color">#FF33B5E5</color>
+    <color name="logcat_level_info_color">#FF99CC00</color>
+    <color name="logcat_level_warn_color">#FFFFBB33</color>
+    <color name="logcat_level_error_color">#FFFF4444</color>
+    <color name="logcat_level_other_color">#FFFFFFFF</color>
 
 </resources>

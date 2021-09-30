@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,21 +24,31 @@ import com.hjq.base.action.ResourcesAction;
 
 import java.util.List;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 /**
- *    author : Android 轮子哥
- *    github : https://github.com/getActivity/AndroidProject
- *    time   : 2018/10/18
- *    desc   : Fragment 基类
+ * author : Android 轮子哥
+ * github : https://github.com/getActivity/AndroidProject
+ * time   : 2018/10/18
+ * desc   : Fragment 基类
  */
 public abstract class BaseFragment<A extends BaseActivity> extends Fragment implements
         ActivityAction, ResourcesAction, HandlerAction, ClickAction, BundleAction, KeyboardAction {
 
-    /** Activity 对象 */
-    private A mActivity;
-    /** 根布局 */
+    /**
+     * Activity 对象
+     */
+    public A mActivity;
+    /**
+     * 根布局
+     */
     private View mRootView;
-    /** 当前是否加载过 */
+    /**
+     * 当前是否加载过
+     */
     private boolean mLoading;
+    Unbinder unbinder;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -52,9 +63,10 @@ public abstract class BaseFragment<A extends BaseActivity> extends Fragment impl
         if (getLayoutId() <= 0) {
             return null;
         }
-
         mLoading = false;
         mRootView = inflater.inflate(getLayoutId(), container, false);
+        unbinder = ButterKnife.bind(this,mRootView);
+        Log.d("ou","unbinder:"+unbinder);
         initView();
         return mRootView;
     }
@@ -79,14 +91,16 @@ public abstract class BaseFragment<A extends BaseActivity> extends Fragment impl
     /**
      * Fragment 可见回调
      *
-     * @param first                 是否首次调用
+     * @param first 是否首次调用
      */
-    protected void onFragmentResume(boolean first) {}
+    protected void onFragmentResume(boolean first) {
+    }
 
     /**
      * Activity 可见回调
      */
-    protected void onActivityResume() {}
+    protected void onActivityResume() {
+    }
 
     @Override
     public void onDestroyView() {
@@ -98,6 +112,7 @@ public abstract class BaseFragment<A extends BaseActivity> extends Fragment impl
     public void onDestroy() {
         super.onDestroy();
         mLoading = false;
+        unbinder.unbind();
         removeCallbacks();
     }
 

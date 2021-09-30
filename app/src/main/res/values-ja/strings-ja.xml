@@ -1,3 +1,14 @@
 <resources>
+    <string name="app_name">マイスキー</string>
     <string name="test_content">テスト</string>
+    <string name="tv_country">国籍</string>
+    <string name="tv_gender">性別</string>
+    <string name="tv_preference">好き</string>
+    <string name="tv_change_password">パスワードを変更する</string>
+    <string name="tv_system_permission">システムパーミッション</string>
+    <string name="tv_language">言語</string>
+    <string name="tv_terms_service">利用規約</string>
+    <string name="tv_contact_us">お問い合わせ</string>
+    <string name="english">英語</string>
+    <string name="japanese">日本語</string>
 </resources>

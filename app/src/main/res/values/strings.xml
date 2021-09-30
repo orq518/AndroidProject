@@ -1,11 +1,45 @@
 <resources>
     <string name="app_name">滑呗</string>
     <string name="test_content">测试内容</string>
-    <string name="common_loading">加载中&#8230;</string>
 
+    <string name="tv_country">Country</string>
+    <string name="tv_gender">Gender</string>
+    <string name="tv_preference">Preference</string>
+    <string name="tv_change_password">Change Password</string>
+    <string name="tv_system_permission">System Permission</string>
+    <string name="tv_language">Language</string>
+    <string name="tv_terms_service">Terms of Service</string>
+    <string name="tv_contact_us">Contact Us</string>
+    <string name="english">英语</string>
+    <string name="japanese">日语</string>
+
+    <string name="set_language">设置语言</string>
+    <string name="logout">Log out</string>
+    <string name="regist">Regist</string>
+    <string name="login">Login</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login_tips1"> By logging in,you agree to our</string>
+    <string name="login_tips2"> Terms of Use </string>
+    <string name="login_tips3"> and </string>
+    <string name="login_tips4"> Privacy Policy</string>
+    <string name="login_divider_text"> - or connect with -</string>
+    <string name="login_no_account">Don’t have an account?</string>
+    <string name="sign_up">Sign_up</string>
+    <string name="have_account">Have an account?</string>
+    <string name="reset">Reset</string>
+    <string name="send">Send</string>
+    <string name="reset_tips"> Please enter your email address that you
+    used to register. We’ll send you an email
+    with a link to reset password.</string>
+
+
+
+    <string name="common_loading">加载中&#8230;</string>
     <string name="common_confirm">确定</string>
     <string name="common_cancel">取消</string>
-
     <!-- 通用的 -->
     <string name="common_crash_hint">应用出了点小意外，正在重新启动</string>
     <string name="common_network_error">当前网络不可用，请检查网络设置</string>

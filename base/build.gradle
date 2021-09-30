@@ -1,8 +1,11 @@
-apply plugin : 'com.android.library'
-apply from : '../config.gradle'
-
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.android.library'
+apply from: '../config.gradle'
 android {
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         // 模块混淆配置
         consumerProguardFiles 'proguard-base.pro'
@@ -12,4 +15,6 @@ android {
 dependencies {
     // 语种切换框架：https://github.com/getActivity/MultiLanguages
     api 'com.github.getActivity:MultiLanguages:6.9'
+    api 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 }

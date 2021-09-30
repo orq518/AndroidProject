@@ -11,7 +11,7 @@
         <!-- 应用的强调色，CheckBox RadioButton Switch 等一般控件的选中效果默认采用该颜色 -->
         <item name="colorAccent">@color/common_accent_color</item>
         <!-- 默认文本颜色，Button、TextView 的文字颜色 -->
-        <item name="android:textColor">@color/common_text_color</item>
+        <item name="android:textColor">@color/common_text_color_333</item>
         <!-- 默认字体大小，Button、TextView 的字体大小 -->
         <item name="android:textSize">14sp</item>
         <!-- 默认提示颜色，Button、TextView 的提示文字颜色 -->
@@ -43,7 +43,54 @@
         <item name="android:windowDisablePreview">true</item>
     </style>
 
+    <style name="FloatingStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#e0c9c4c4</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 
+    <style name="Widget.Design.TextInputLayout" parent="AppTheme">
+        <item name="hintTextAppearance">@style/AppTheme.TextFloatLabelAppearance</item>
+        <item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>
+        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow
+        </item>
+    </style>
+
+    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
+        <!-- Floating label appearance here -->
+        <item name="android:textColor">@color/common_text_color_828282</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <!-- Error message appearance here -->
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!-- 默认圆角按钮样式-黑色 -->
+    <style name="ButtonStyle_black" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_white_fb</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_black_round_selector</item>
+        <item name="android:foreground">@null</item>
+    </style>
+    <!-- 默认圆角按钮样式-白色 -->
+    <style name="ButtonStyle_white" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_white_round_selector</item>
+        <item name="android:foreground">@null</item>
+    </style>
     <!-- 默认文本框样式 -->
     <style name="EditTextStyle">
         <item name="android:background">@null</item>

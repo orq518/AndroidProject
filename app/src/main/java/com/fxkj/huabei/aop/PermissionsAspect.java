@@ -14,8 +14,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import java.util.List;
 
 /**
- *    author : Android 轮子哥
- *    github : https://github.com/getActivity/AndroidProject
  *    time   : 2019/12/06
  *    desc   : 权限申请切面
  */

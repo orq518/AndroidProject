@@ -15,6 +15,8 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.6.3'
         // AOP 配置插件：https://github.com/HujiangTechnology/gradle_plugin_android_aspectjx
         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10'
+        //butterknife!!!添加这一条classpath
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
     }
 }
 

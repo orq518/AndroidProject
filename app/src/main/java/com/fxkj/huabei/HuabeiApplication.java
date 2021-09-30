@@ -8,6 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.os.Build;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
 
 import com.fxkj.huabei.http.glide.GlideApp;
+import com.fxkj.huabei.utils.LogUtil;
 import com.hjq.bar.TitleBar;
 import com.hjq.bar.initializer.LightBarInitializer;
 import com.fxkj.huabei.aop.DebugLog;
@@ -30,12 +32,15 @@ import com.fxkj.huabei.other.SmartBallPulseFooter;
 import com.fxkj.huabei.other.ToastInterceptor;
 import com.hjq.http.EasyConfig;
 import com.hjq.language.MultiLanguages;
+import com.hjq.language.OnLanguageListener;
 import com.hjq.permissions.XXPermissions;
 import com.hjq.toast.ToastUtils;
 import com.hjq.toast.style.ToastBlackStyle;
 import com.scwang.smart.refresh.header.MaterialHeader;
 import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import com.tencent.bugly.crashreport.CrashReport;
+
+import java.util.Locale;
 
 import okhttp3.OkHttpClient;
 import timber.log.Timber;
@@ -73,10 +78,24 @@ public final class HuabeiApplication extends Application {
      * 初始化一些第三方框架
      */
     public static void initSdk(Application application) {
-        // 初始化语种切换框架
-        MultiLanguages.init(application);
+
         // 设置调试模式
         XXPermissions.setDebugMode(AppConfig.isDebug());
+         // 初始化语种切换框架
+        MultiLanguages.init(application);
+        // 设置语种变化监听器
+        MultiLanguages.setOnLanguageListener(new OnLanguageListener() {
+
+            @Override
+            public void onAppLocaleChange(Locale oldLocale, Locale newLocale) {
+                LogUtil.d("监听到应用切换了语种，旧语种：" + oldLocale + "，新语种：" + newLocale);
+            }
+
+            @Override
+            public void onSystemLocaleChange(Locale oldLocale, Locale newLocale) {
+                LogUtil.d("监听到系统切换了语种，旧语种：" + oldLocale + "，新语种：" + newLocale + "，是否跟随系统：" + MultiLanguages.isSystemLanguage());
+            }
+        });
 
         // 初始化吐司
         ToastUtils.init(application, new ToastBlackStyle(application) {

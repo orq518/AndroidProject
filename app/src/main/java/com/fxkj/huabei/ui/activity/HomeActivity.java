@@ -1,18 +1,21 @@
 package com.fxkj.huabei.ui.activity;
 
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.fxkj.huabei.R;
-import com.fxkj.huabei.ui.app.AppActivity;
-import com.fxkj.huabei.ui.fragment.MainMenuLeftFragment;
 import com.fxkj.huabei.manager.ActivityManager;
 import com.fxkj.huabei.other.DoubleClickHelper;
+import com.fxkj.huabei.ui.app.AppActivity;
+import com.fxkj.huabei.ui.fragment.MainMenuLeftFragment;
+import com.fxkj.huabei.utils.LogUtil;
 import com.nineoldandroids.view.ViewHelper;
+
+import butterknife.BindView;
 
 public class HomeActivity extends AppActivity {
 
@@ -41,7 +44,6 @@ public class HomeActivity extends AppActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.id_drawerLayout);
         //关闭手势滑动：DrawerLayout.LOCK_MODE_LOCKED_CLOSED（Gravity.LEFT：代表左侧的）
         mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, Gravity.LEFT);
-
         leftMenuFragment = (MainMenuLeftFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_leftmenu);
         initEvent();
     }
@@ -76,7 +78,7 @@ public class HomeActivity extends AppActivity {
              */
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
-                Log.w("onDrawerSlide", "slideOffset=" + slideOffset);//0.0 -- 0.56 -- 1.0
+//                Log.w("onDrawerSlide", "slideOffset=" + slideOffset);//0.0 -- 0.56 -- 1.0
 
                 View mContent = mDrawerLayout.getChildAt(0);//内容区域view
                 View mMenu = drawerView;
@@ -127,6 +129,9 @@ public class HomeActivity extends AppActivity {
         //打开手势滑动：DrawerLayout.LOCK_MODE_UNLOCKED（Gravity.LEFT：代表左侧的）
         mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED, Gravity.LEFT);
     }
+    public void closeDrawer(int gravity) {
+        mDrawerLayout.closeDrawer(gravity);
+    }
     @Override
     public void onBackPressed() {
         if (!DoubleClickHelper.isOnDoubleClick()) {
@@ -148,4 +153,5 @@ public class HomeActivity extends AppActivity {
     protected void onDestroy() {
         super.onDestroy();
     }
+
 }
