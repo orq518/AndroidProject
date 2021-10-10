@@ -5,13 +5,13 @@
 #-libraryjars libs/umeng-analytics-v5.2.4.jar
 
 # 不混淆这些包下的字段名
--keepclassmembernames class com.hjq.demo.http.request.** {
+-keepclassmembernames class com.fxkj.huabei.http.request.** {
     <fields>;
 }
--keepclassmembernames class com.hjq.demo.http.response.** {
+-keepclassmembernames class com.fxkj.huabei.http.response.** {
     <fields>;
 }
--keepclassmembernames class com.hjq.demo.http.model.** {
+-keepclassmembernames class com.fxkj.huabei.http.model.** {
     <fields>;
 }
 

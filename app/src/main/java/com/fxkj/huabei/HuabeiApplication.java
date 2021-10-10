@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
 
+import com.facebook.FacebookSdk;
 import com.fxkj.huabei.http.glide.GlideApp;
 import com.fxkj.huabei.utils.LogUtil;
 import com.hjq.bar.TitleBar;
@@ -74,14 +75,20 @@ public final class HuabeiApplication extends Application {
         super.attachBaseContext(MultiLanguages.attach(base));
     }
 
+//    //FaceBook  相关 todo fb相关
+//    private static void initFacebook(Context context) {
+//        FacebookSdk.setApplicationId("xxxxx");
+//        FacebookSdk.sdkInitialize(context);
+//    }
+
     /**
      * 初始化一些第三方框架
      */
     public static void initSdk(Application application) {
-
+//        initFacebook(application);
         // 设置调试模式
         XXPermissions.setDebugMode(AppConfig.isDebug());
-         // 初始化语种切换框架
+        // 初始化语种切换框架
         MultiLanguages.init(application);
         // 设置语种变化监听器
         MultiLanguages.setOnLanguageListener(new OnLanguageListener() {

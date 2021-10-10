@@ -79,6 +79,19 @@
         <item name="android:background">@drawable/button_black_round_selector</item>
         <item name="android:foreground">@null</item>
     </style>
+
+    <style name="txt_lab" parent="TextAppearance.AppCompat">
+        <!-- 默认状态提示颜色和字体-->
+        <item name="android:textColorHint">@color/common_text_color_333</item>
+        <item name="android:textSize">15sp</item>
+        <!-- 下面可以根据需要设置，如果没有将默认使用默认theme的颜色 -->
+        <!-- Label标签的颜色 -->
+        <item name="colorAccent">@color/common_text_color_828282</item>
+        <!-- 默认状态状态设置底线颜色 -->
+        <item name="colorControlNormal">@color/color_text_black_f2</item>
+        <!-- 选择的底线颜色 -->
+        <item name="colorControlActivated">@color/black40</item>
+    </style>
     <!-- 默认圆角按钮样式-白色 -->
     <style name="ButtonStyle_white" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:paddingStart">20dp</item>

@@ -1,4 +1,4 @@
-package com.hjq.demo.wxapi;
+package com.fxkj.huabei.wxapi;
 
 import com.umeng.socialize.weixin.view.WXCallbackActivity;
 

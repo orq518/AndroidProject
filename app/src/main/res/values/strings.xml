@@ -2,6 +2,10 @@
     <string name="app_name">滑呗</string>
     <string name="test_content">测试内容</string>
 
+    <string name="server_client_id">1072549763156-gkm20kqv0epgk1n6diaqb9467k730f7l.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">xxxxxxx</string>
+    <string name="fb_login_protocol_scheme">fb15477621189....</string>
+
     <string name="tv_country">Country</string>
     <string name="tv_gender">Gender</string>
     <string name="tv_preference">Preference</string>
@@ -35,6 +39,18 @@
     used to register. We’ll send you an email
     with a link to reset password.</string>
 
+    <string name="prefer">Prefer</string>
+    <string name="ski">Ski</string>
+    <string name="snowboard">Snowboard</string>
+    <string name="finish">Finish</string>
+    <string name="am">Am</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="country">Country</string>
+    <string name="select_country">Select country</string>
+    <string name="new_password">New password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="change_password">Change password</string>
 
 
     <string name="common_loading">加载中&#8230;</string>

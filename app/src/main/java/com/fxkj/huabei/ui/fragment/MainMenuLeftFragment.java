@@ -9,7 +9,9 @@ import android.widget.TextView;
 import com.fxkj.huabei.R;
 import com.fxkj.huabei.ui.activity.HomeActivity;
 import com.fxkj.huabei.ui.activity.LoginActivity;
+import com.fxkj.huabei.ui.activity.ResetByEmailActivity;
 import com.fxkj.huabei.ui.activity.SetLanguageActivity;
+import com.fxkj.huabei.ui.activity.SetPersonInfoActivity;
 import com.fxkj.huabei.utils.LogUtil;
 import com.hjq.base.BaseFragment;
 
@@ -87,8 +89,10 @@ public class MainMenuLeftFragment extends BaseFragment {
             case R.id.iv_photo:
                 break;
             case R.id.tv_preference:
+                startActivity(new Intent(mActivity, SetPersonInfoActivity.class));
                 break;
             case R.id.tv_change_password:
+                startActivity(new Intent(mActivity, ResetByEmailActivity.class));
                 break;
             case R.id.tv_system_permission:
                 break;

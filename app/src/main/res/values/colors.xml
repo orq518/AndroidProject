@@ -7,12 +7,14 @@
     <color name="common_window_background_color">#F4F4F4</color>
     <color name="common_text_color_333">#333333</color>
     <color name="common_text_color_222">#222222</color>
+    <color name="common_text_color_666">#666666</color>
     <color name="common_text_color_828282">#828282</color>
     <color name="common_gray_d1">#D1D1D1</color>
     <color name="common_text_hint_color">@color/panda</color>
     <color name="color_white_fb">#FBFBFB</color>
+    <color name="color_text_black_f2">#f2f2f2</color>
     <color name="color_text_blue_2f">#2F80ED</color>
-
+    <color name="color_text_EDEDED">#EDEDED</color>
 
     <!-- 按钮按压时的颜色 -->
     <color name="common_button_pressed_color">#AA5A8DDF</color>
